@@ -5,6 +5,7 @@ import YourBMI from './YourBMI'
 import BMIDetail from './BMIDetail';
 
 function App() {
+  // useState
   const [data, setData] = useState({
     pounds:"",
     feet:"",
