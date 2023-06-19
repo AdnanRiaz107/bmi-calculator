@@ -1,0 +1,19 @@
+.underweight-bmi{
+    background-color: yellow;
+    padding: 0% 2%;
+}
+
+.normal-bmi{
+    background-color:#198754;
+    padding: 0% 2%;
+}
+
+.overweight-bmi{
+    background-color: orange;
+    padding: 0% 2%;
+}
+
+.obese-bmi{
+    background-color: #DC3545;
+    padding: 0% 2%;
+}

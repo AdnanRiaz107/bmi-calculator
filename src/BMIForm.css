@@ -1,0 +1,17 @@
+.form-display{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.label-display{
+    margin-top: 2%;
+    font-weight: bold;
+}
+
+.height-display{
+    visibility: hidden;
+}
