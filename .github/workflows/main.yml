@@ -46,5 +46,7 @@ jobs:
       #     git push -f origin gh-pages
 
       - name: Deploy to GitHub Pages
-        run: npm run deploy
-
+        run: |
+          git config --local user.name "AdnanRiaz107"
+          git config --local user.email "adnanriaz107@mail.dlut.edu.cn"
+          npm run deploy
