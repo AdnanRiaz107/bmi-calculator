@@ -50,6 +50,5 @@ jobs:
           git config --local user.name "AdnanRiaz107"
           git config --local user.email "adnanriaz107@mail.dlut.edu.cn"
           npm install gh-pages
-          npm run build
-          npx gh-pages -d build -b gh-pages -r https://github.com/AdnanRiaz107/bmi-calculator.git
+          npm run deploy
 
