@@ -28,7 +28,7 @@ jobs:
         run: |
           git config --global user.name "AdnanRiaz107"
           git config --global user.email "adnanriaz107@mail.dlut.edu.cn"
-          echo "domain.com" > ./build/CNAME
+          echo "https://AdnanRiaz107.github.io/bmi-calculator" > ./build/CNAME
           git checkout -B gh-pages
           git add -f ./build
           git commit -m "Deploy to GitHub Pages"
