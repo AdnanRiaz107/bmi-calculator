@@ -52,7 +52,7 @@ jobs:
           git checkout -B gh-pages
           git add -f ./build
           git commit -m "Deploy to GitHub Pages"
-          git push -f https://github.com/AdnanRiaz107/bmi-calculator.git gh-pages:gh-pages
+          git push -B gh-pages:gh-pages
         env:
           GH_TOKEN: "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" # Use your generated PAT here
 
