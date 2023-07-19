@@ -1,16 +1,23 @@
-# Fetching the latest node image on alpine linux
-FROM node:alpine AS development
+# Use an official Node.js runtime as the base image
+FROM node:14-alpine
 
-# Declaring env
-ENV NODE_ENV development
+# Set the working directory in the container
+WORKDIR /app
 
-# Setting up the work directory
-WORKDIR /bmi-calculator-main
+# Copy the package.json and package-lock.json files
+COPY package*.json ./
 
-# Installing dependencies
-COPY ./package.json /bmi-calculator-main
+# Install dependencies
 RUN npm install
 
+# Copy the application code
+COPY . .
 
-# Starting our application
-CMD npm start
+# Build the React app
+RUN npm run build
+
+# Expose the container port
+EXPOSE 80
+
+# Start the React app
+CMD ["npm", "start"]
