@@ -26,8 +26,8 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git config --local user.name "AdnanRiaz107"
-          git config --local user.email "adnanriaz107@mail.dlut.edu.cn"
+          git config --global user.name "AdnanRiaz107"
+          git config --global user.email "adnanriaz107@mail.dlut.edu.cn"
           npm install gh-pages
           npm run deploy
 
