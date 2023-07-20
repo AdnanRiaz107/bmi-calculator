@@ -13,33 +13,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
       - name: Install dependencies
         run: npm install
 
-      - name: Build React app
+      - name: Build
         run: npm run build
 
-      - name: Build Docker image
-        run: |
-          docker build -t ghcr.io/AdnanRiaz107/bmi-calculator:${{ github.sha }} .
-
-      - name: Log in to Docker registry
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Push Docker image to registry
-        run: docker push ghcr.io/AdnanRiaz107/bmi-calculator:${{ github.sha }}
-
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          branch: gh-pages
+          folder: build
+          token: ${{ secrets.GITHUB_TOKEN }}
