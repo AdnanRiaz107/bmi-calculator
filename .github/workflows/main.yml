@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-  DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
+  DOCKER_USERNAME: "AdnanRiaz107"
+  DOCKER_PASSWORD: "Adn2n r12z"
 
 jobs:
   build-and-push:
