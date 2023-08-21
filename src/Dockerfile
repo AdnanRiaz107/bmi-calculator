@@ -10,6 +10,8 @@ COPY . .
 
 EXPOSE 4000
 CMD [ "node", "index.js" ]
+
+
 # Fetching the latest node image on alpine linux
 #FROM node:alpine AS development
 
