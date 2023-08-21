@@ -1,0 +1,16 @@
+name: Build and push Docker image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Docker image
+        run: docker build . -t bmi-calculator
+      - name: Push Docker image
+        run: docker push bmi-calculator
