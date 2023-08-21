@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  app:
+    image: bmi-calculator
+    container_name: bmi-calculator
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
