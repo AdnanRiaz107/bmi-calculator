@@ -1,16 +1,13 @@
-# Fetching the latest node image on alpine linux
-FROM node:alpine AS development
 
-# Declaring env
-ENV NODE_ENV development
+FROM node:latest
 
-# Setting up the work directory
-WORKDIR /bmi-calculator-main
+WORKDIR /usr/src/bmi-calculator-main
 
-# Installing dependencies
-COPY ./package.json /bmi-calculator-main
+COPY package.json ./
+
 RUN npm install
 
+COPY . .
 
-# Starting our application
-CMD npm start
+EXPOSE 4000
+CMD [ "node", "index.js" ]
